@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-NAME=ONESOURCE
+NAME={name or prefix}
 az ad sp list --all --query "[?contains(displayName, '$NAME')].[displayName,appId]" -o tsv > spslist.tsv
 while read -r SPS SPID
 do
